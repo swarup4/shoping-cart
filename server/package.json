@@ -1,0 +1,66 @@
+{
+  "name": "shoping-cart",
+  "version": "1.0.0",
+  "description": "Basic Shoping Cart Web Application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "lessc app/css/*.less app/css/style.css",
+    "debug": "babel-node --inspect --debug-brk server.js",
+    "serve": "babel-watch server.js",
+    "start": "concurrently \"npm run build\" \"npm run serve\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swarup4/shoping-cart.git"
+  },
+  "keywords": [
+    "Shoping-Cart",
+    "MEAN"
+  ],
+  "author": "Swarup Saha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swarup4/shoping-cart/issues"
+  },
+  "homepage": "https://github.com/swarup4/shoping-cart#readme",
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-animate": "^1.7.5",
+    "angular-aria": "^1.7.5",
+    "angular-material": "^1.1.7",
+    "angular-messages": "^1.7.5",
+    "angular-ui-router": "^1.0.20",
+    "async": "^2.6.0",
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.4.0",
+    "less": "^2.7.2",
+    "mongoose": "^5.0.4",
+    "multer": "^1.3.0",
+    "nodemon": "^1.14.12",
+    "passport": "^0.4.0",
+    "q": "^1.5.1",
+    "socket.io": "^2.0.4",
+    "ws": "^4.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-watch": "^2.0.7",
+    "babelify": "^8.0.0",
+    "browserify": "^16.1.0",
+    "browserify-ngannotate": "^2.0.0",
+    "concurrently": "^3.6.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-clean-css": "^3.9.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-less": "^3.5.0",
+    "gulp-uglify": "^3.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  }
+}

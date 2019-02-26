@@ -1,0 +1,25 @@
+{
+  "name": "shoping-cart",
+  "description": "Basic Shoping Cart Web Application",
+  "main": "server.js",
+  "author": "Swarup Saha",
+  "license": "ISC",
+  "keywords": [
+    "Shoping-Cart",
+    "MEAN"
+  ],
+  "homepage": "https://github.com/swarup4/shoping-cart",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^1.0.5",
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1",
+    "angular-socket-io": "^0.7.0"
+  }
+}

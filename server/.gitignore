@@ -1,0 +1,21 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/bower_components
+/application/app/build
+
+
+# IDEs
+/.idea
+/.vscode
+
+# misc
+.DS_Store
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+/.chrome
