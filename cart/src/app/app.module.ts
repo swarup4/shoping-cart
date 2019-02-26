@@ -31,6 +31,8 @@ import { OrderService } from './order/order.service';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    // BrowserAnimationsModule,
+    // MatInputModule, MatButtonModule, MatCheckboxModule,
     FormsModule,
     HttpClientModule
   ],
