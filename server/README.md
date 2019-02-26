@@ -1,3 +1,5 @@
 # shoping-cart
 
-# Previus version Angular UI Router 1.0.3
+# Angular 7
+# Node JS 10
+# MongoDb
