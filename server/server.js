@@ -5,6 +5,7 @@ let path = require("path");
 let route = require("./routes/web.js");
 let apiRoute = require("./routes/api.js");
 let jwt = require("jsonwebtoken");
+var cors = require('cors');
 // let socketio = require('socket.io');
 // let http = require('http');
 // let cluster = require('cluster');
@@ -37,6 +38,8 @@ let config = require('./config');
     mongoose.Promise = global.Promise;
 
     app.use(express.static(__dirname));
+
+    app.use(cors())
 
     app.use(bodyParser.json());
     app.use(bodyParser.urlencoded({ extended: false }));

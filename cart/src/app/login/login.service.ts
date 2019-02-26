@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpInterceptor } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { Api } from '../apiConstants';
 
@@ -8,7 +8,14 @@ import { Api } from '../apiConstants';
 })
 export class LoginService {
 
-  constructor(private http: HttpClient) { }
+  headersOption = {}
+  constructor(private http: HttpClient) { 
+    // let header = new HttpHeaders();
+    // header.append('Content-Type', 'application/json');
+    // this.headersOption = {
+    //   headers: header
+    // }
+  }
 
   loginUsers(data) {
     const url = Api.userApi + '/login';
