@@ -30,12 +30,12 @@ router.post("/bookOrder", logins.compareTokeTimeOut, (req, res, next) => {
 });
 
 router.get("/getAllOrder", logins.compareTokeTimeOut, (req, res, next) => {
-    debugger;
-    Order.find({}, (err, order) => {
+    Order.orderInfo.find({}, (err, order) => {
         if (err) {
             res.send("error");
         } else {
             res.json({
+                currentTime: new Date(),
                 token: req.token,
                 data: order
             });

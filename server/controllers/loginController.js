@@ -36,7 +36,6 @@ router.get("/", (req, res) => {
 // Create New User 
 // Params Or Object : Name, Username, Password, Email, contactNo
 router.post("/signup", logins.checkExestingUser, (req, res) => {
-    debugger;
     let obj = req.body;
     let model = new User.Auth(obj);
     // model.password = jwt.sign(obj.password, 'shhhhh');
@@ -79,10 +78,9 @@ router.post("/login", (req, res) => {
                 res.send("Username & password is not Valid");
             } else {
                 console.log("Success");
-                debugger;
                 logins.updateToken(user.id, user.username, function(token){
                     res.json({
-                        success: true,
+                        currentTime: new Date(),
                         token: token,
                         username: user.username
                     });

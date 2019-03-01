@@ -66,14 +66,12 @@ loginObj.updateToken = (id, username, next) => {
             console.log(err);
             res.send(err.message);
         } else {
-            debugger;
             next(user.token);
         }
     });
 }
 
 loginObj.compareTokeTimeOut = (req, res, next) => {
-    debugger;
     let token = req.headers.authorization;
     let tokenData = jwt.verify(token, 'ssshhhhh');
     let tokenTime = new Date(tokenData.time);
