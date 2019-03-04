@@ -1,5 +1,5 @@
-let express = require("express");
 let bodyParser = require("body-parser");
+let express = require("express");
 let mongoose = require("mongoose");
 let path = require("path");
 let route = require("./routes/web.js");

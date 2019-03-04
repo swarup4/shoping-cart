@@ -9,13 +9,14 @@ import { MaterialModule } from './material/material.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
 import { OrderComponent } from './order/order.component';
-import { ProductsComponent } from './products/products.component';
+import { ProductComponent } from './product/product.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { SignupComponent } from './signup/signup.component';
 
 import { LoginService } from './login/login.service';
 import { HomeService } from './home/home.service';
-import { ProductsService } from './products/products.service';
+import { ProductService } from './product/product.service';
 import { OrderService } from './order/order.service';
 
 @NgModule({
@@ -23,9 +24,10 @@ import { OrderService } from './order/order.service';
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SignupComponent,
     OrderComponent,
-    ProductsComponent,
+    ProductComponent,
+    SidenavComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,7 @@ import { OrderService } from './order/order.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService, HomeService, ProductsService, OrderService],
+  providers: [LoginService, HomeService, ProductService, OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
