@@ -18,6 +18,9 @@ import { LoginService } from './login/login.service';
 import { HomeService } from './home/home.service';
 import { ProductService } from './product/product.service';
 import { OrderService } from './order/order.service';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { OrderService } from './order/order.service';
     OrderComponent,
     ProductComponent,
     SidenavComponent,
-    SignupComponent
+    SignupComponent,
+    DashboardComponent,
+    UsersComponent,
+    UserdetailsComponent
   ],
   imports: [
     BrowserModule,
