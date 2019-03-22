@@ -1,9 +1,16 @@
-.example-form {
+.login-page-bg{
+    background: #03a9f4 !important;
+    color: #fff !important;
+    height: 100vh;
+}
+
+.login-form {
     min-width: 150px;
     max-width: 500px;
     width: 100%;
 }
-  
-.example-full-width {
-    width: 100%;
+
+.login-card {
+    width: 400px;
 }
+

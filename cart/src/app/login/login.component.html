@@ -1,13 +1,23 @@
-<p>
-  login works!
-</p>
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Username" name="username" [(ngModel)]="user.username">
-  </mat-form-field>
+<div class="login-page-bg" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="login-card">
+    <mat-card-content>
+      <div>
+        <h1>Login</h1>
+      </div>
+      <form class="login-form" fxLayout="column">
+        <mat-form-field>
+          <input matInput placeholder="Username" type="text" name="username" [(ngModel)]="user.username" />
+        </mat-form-field>
 
-  <mat-form-field class="example-full-width">
-    <input matInput placeholder="Password" name="password" [(ngModel)]="user.password">
-  </mat-form-field>
-  <button mat-button mat-raised-button color="accent" (click)="loginUser(user)">Click me!</button>
-</form>
+        <mat-form-field>
+          <input matInput placeholder="Password" type="text" name="password" [(ngModel)]="user.password" />
+        </mat-form-field>
+        <button mat-raised-button color="primary" (click)="loginUser(user)">Login</button>
+        <div fxLayout="row">
+          <button mat-button color="primary" fxFlex="50">Create a new account</button>
+          <button mat-button color="primary" fxFlex="50">Forgot password</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

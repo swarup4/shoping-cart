@@ -20,11 +20,14 @@ const routes: Routes = [
   ]},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'myprofile', component: UsersComponent, canActivate: [AuthGuardService], children: [
+  // { path: 'myprofile', component: UsersComponent, canActivate: [AuthGuardService], children: [
+  //   { path: '', component: UserdetailsComponent },
+  //   { path: 'order', component: OrderComponent }
+  // ]},
+  { path: 'myprofile', component: UsersComponent, children: [
     { path: '', component: UserdetailsComponent },
     { path: 'order', component: OrderComponent }
-  ]},
-  
+  ]}
 ];
 
 @NgModule({

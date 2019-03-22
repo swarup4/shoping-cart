@@ -32,6 +32,8 @@ import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -42,7 +44,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule,
     MatExpansionModule, MatButtonToggleModule, MatChipsModule, MatIconModule,
     MatProgressSpinnerModule, MatProgressBarModule, MatDialogModule, MatTooltipModule,
-    MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule
+    MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule, FlexLayoutModule
   ],
   exports: [
     BrowserAnimationsModule, MatCheckboxModule, MatButtonModule, MatInputModule,
@@ -51,7 +53,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule,
     MatExpansionModule, MatButtonToggleModule, MatChipsModule, MatIconModule,
     MatProgressSpinnerModule, MatProgressBarModule, MatDialogModule, MatTooltipModule,
-    MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule
+    MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule, FlexLayoutModule
   ]
 })
 export class MaterialModule { }
