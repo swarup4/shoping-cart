@@ -8,7 +8,8 @@
     "build": "lessc app/css/*.less app/css/style.css",
     "debug": "babel-node --inspect --debug-brk server.js",
     "serve": "babel-watch server.js",
-    "start": "concurrently \"npm run build\" \"npm run serve\""
+    "start": "concurrently \"npm run build\" \"npm run serve\"",
+    "dev": "NODE_ENV=dev nodemon server.js"
   },
   "repository": {
     "type": "git",

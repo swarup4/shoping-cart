@@ -11,5 +11,5 @@
 
 osascript -e 'tell app "Terminal"
     cd ./server
-    do script "node server.js"
+    do script "nodemon server.js"
 end tell'

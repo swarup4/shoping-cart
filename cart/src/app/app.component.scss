@@ -1,7 +1,27 @@
+$base-color: #1E2129;
+$secondary-base-color: #2D323E;
+$secondary-base-active-color: #252A35;
+$accent-color: #039be5;
+$white-color: #FFFFFF;
+
+$font-size: 14px;
+
 .full-width {
     width: 100% !important;
 }
-.container{
-    width: calc(100vw - 172px);
-    margin-left: 172px;
+.success{
+    background: #09d261;
+    color: $white-color;
+}
+.error{
+    background: #f44336;
+    color: $white-color;
+}
+.warning{
+    background: #ffc107;
+    color: $white-color;
+}
+
+.circle-image{
+    border-radius: 50%;
 }

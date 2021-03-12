@@ -27,13 +27,14 @@ let config = require('./config');
     console.log(conf.DB_URI);
 
     let app = express();
-    let port = process.env.port || 3001;
+    debugger;
+    let port = conf.PORT;
 
-    mongoose.connect('mongodb://localhost/shoping').then(() => {
-        console.log("Connected");
-    }).catch(err => {
-        console.log("Error : " + err);
-    })
+    // mongoose.connect('mongodb://localhost/shoping').then(() => {
+    //     console.log("Connected");
+    // }).catch(err => {
+    //     console.log("Error : " + err);
+    // })
 
     mongoose.Promise = global.Promise;
 
@@ -74,6 +75,7 @@ let config = require('./config');
     app.use(apiRoute.order);
 
     app.listen(port, () => {
+        debugger
         console.log("Server is running at : http://localhost:" + port);
     });
 

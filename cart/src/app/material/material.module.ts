@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCheckboxModule, MatButtonModule } from '@angular/material';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRippleModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material/input';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
@@ -31,14 +34,14 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTableModule } from '@angular/material/table';
 import { MatSortModule } from '@angular/material/sort';
 import { MatPaginatorModule } from '@angular/material/paginator';
-
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    BrowserAnimationsModule, MatCheckboxModule, MatButtonModule, MatInputModule,
+    BrowserAnimationsModule, MatCheckboxModule, MatButtonModule, MatBadgeModule, MatRippleModule, MatInputModule,
     MatAutocompleteModule, MatDatepickerModule, MatFormFieldModule, MatRadioModule, MatSelectModule,
     MatSliderModule, MatSlideToggleModule, MatMenuModule, MatSidenavModule, MatToolbarModule,
     MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule,
@@ -47,7 +50,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSnackBarModule, MatTableModule, MatSortModule, MatPaginatorModule, FlexLayoutModule
   ],
   exports: [
-    BrowserAnimationsModule, MatCheckboxModule, MatButtonModule, MatInputModule,
+    BrowserAnimationsModule, MatCheckboxModule, MatButtonModule, MatBadgeModule, MatRippleModule, MatInputModule,
     MatAutocompleteModule, MatDatepickerModule, MatFormFieldModule, MatRadioModule, MatSelectModule,
     MatSliderModule, MatSlideToggleModule, MatMenuModule, MatSidenavModule, MatToolbarModule,
     MatListModule, MatGridListModule, MatCardModule, MatStepperModule, MatTabsModule,

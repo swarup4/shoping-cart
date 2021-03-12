@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Api } from '../apiConstants';
+// import { Api } from '../apiConstants';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { Api } from '../apiConstants';
 export class OrderService {
 
   headersOption = {}
+  orderApi = 'http://127.0.0.1:3001/api/order';
   constructor(private http: HttpClient) { }
 
   refreshToken(){
@@ -22,7 +23,7 @@ export class OrderService {
 
   getAllOrder(){
     debugger;
-    let url = Api.orderApi;
+    let url = this.orderApi;
     this.refreshToken();
     return this.http.get(url + '/getAllOrder', this.headersOption);
   }

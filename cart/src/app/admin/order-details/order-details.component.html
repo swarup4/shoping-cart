@@ -1,0 +1,175 @@
+<div class="container">
+    <div class="banner" color="primary"></div>
+    <div class="content">
+        <div fxLayout="column">
+            <div fxLayout="row" fxLayoutAlign="center center" class="heading">
+                <div fxFlex>
+                    <span class="heading-text">
+                        <mat-icon>shopping_basket</mat-icon> Orders
+                    </span>
+                </div>
+            </div>
+
+            <div fxLayout="row">
+                <mat-card class="card-container" fxFlex>
+                    <mat-tab-group fxFlex>
+                        <mat-tab label="Order Details" fxFlex>
+                            <div class="card-content">
+                                <div class="section">
+                                    <div class="heading">
+                                        <mat-icon>account_circle</mat-icon><span>Customer</span>
+                                    </div>
+                                    <section>
+                                        <table class="table">
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Company</th>
+                                            </tr>
+        
+                                            <tr>
+                                                <td><img src="assets/Profile.jpeg"
+                                                        class="table-avater circle-image"><span>Swarup Saha</span></td>
+                                                <td><span>swarup.saha004@hotmail.com</span></td>
+                                                <td><span>+91-9035845781</span></td>
+                                                <td><span>L&T Infotech India Pvt. Ltd.</span></td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                    
+                                    <section>
+                                        <mat-accordion>
+                                            <mat-expansion-panel>
+                                                <mat-expansion-panel-header>
+                                                    <mat-panel-title>
+                                                        Shipping Address
+                                                    </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <p>377 E South Omaha Bridge Rd, Council Bluffs, IA 51501, USA </p>
+                                            </mat-expansion-panel>
+                                            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                                <mat-expansion-panel-header>
+                                                    <mat-panel-title>
+                                                        Delivery Address
+                                                    </mat-panel-title>
+                                                </mat-expansion-panel-header>
+                                                <p>704 6th Ave, New York, NY 10010, USA</p>
+                                            </mat-expansion-panel>
+                                        </mat-accordion>
+                                    </section>
+                                </div>
+                                <div class="section">
+                                    <div class="heading">
+                                        <mat-icon>access_time</mat-icon><span>Order Status</span>
+                                    </div>
+                                    <section>
+                                        <table class="table">
+                                            <tr>
+                                                <th>Status</th>
+                                                <th>Updated On</th>
+                                            </tr>
+        
+                                            <tr>
+                                                <td>
+                                                    <label class="status success"> On pre-order (not paid)</label>
+                                                </td>
+                                                <td> Apr 3, 2018 </td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                    <section fxLayout="row" fxLayoutAlign="center center">
+                                        <div fxLayout="row" fxLayoutGap="25px" fxFlex="50">
+                                            <div fxFlex>
+                                                <mat-form-field>
+                                                    <mat-label>Favorite food</mat-label>
+                                                    <mat-select>
+                                                        <mat-option *ngFor="let food of foods" [value]="food.value">
+                                                            {{food.viewValue}}
+                                                        </mat-option>
+                                                    </mat-select>
+                                                </mat-form-field>
+                                            </div>
+                                            <div>
+                                                <button mat-raised-button color="accent">Update Status</button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+
+                                <div class="section">
+                                    <div class="heading">
+                                        <mat-icon>attach_money</mat-icon><span>Payment</span>
+                                    </div>
+                                    <section>
+                                        <table class="table">
+                                            <tr>
+                                                <th>TransactionID</th>
+                                                <th>Payment Method</th>
+                                                <th>Amount</th>
+                                                <th>Date</th>
+                                            </tr>
+                                            <tr>
+                                                <td> 2a894b9e </td>
+                                                <td> Credit Card </td>
+                                                <td> 73.31 </td>
+                                                <td> Feb 23, 2018 </td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </div>
+
+
+                                <div class="section">
+                                    <div class="heading">
+                                        <mat-icon>local_shipping</mat-icon><span>Shipping</span>
+                                    </div>
+                                    <section>
+                                        <table class="table">
+                                            <tr>
+                                                <th>Tracking Code</th>
+                                                <th>Carrier</th>
+                                                <th>Fee</th>
+                                                <th>Date</th>
+                                            </tr>
+                                            <tr>
+                                                <td> </td>
+                                                <td> TNT </td>
+                                                <td> 7.00 </td>
+                                                <td> 2018/04/10 07:03:52 </td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Products" fxFlex>
+                            <div class="card-content">
+                                <div class="section">
+                                    <section>
+                                        <table class="table">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Image</th>
+                                                <th>Name</th>
+                                                <th>Price</th>
+                                                <th>Quantity</th>
+                                            </tr>
+                                            <tr>
+                                                <td> 1 </td>
+                                                <td> <img src="assets/a-walk-amongst-friends.jpg" class="table-image"> </td>
+                                                <td> A Walk Amongst Friends - Canvas Print </td>
+                                                <td> 10.24 </td>
+                                                <td> 1 </td>
+                                            </tr>
+                                        </table>
+                                    </section>
+                                </div>
+                            </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

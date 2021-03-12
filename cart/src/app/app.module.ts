@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
+import { AdminModule } from './admin/admin.module';
 import { MaterialModule } from './material/material.module';
 
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { OrderService } from './order/order.service';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UsersComponent } from './users/users.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -39,8 +41,10 @@ import { UserdetailsComponent } from './userdetails/userdetails.component';
     BrowserModule,
     AppRoutingModule,
     MaterialModule,
+    AdminModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [LoginService, HomeService, ProductService, OrderService],
   bootstrap: [AppComponent]

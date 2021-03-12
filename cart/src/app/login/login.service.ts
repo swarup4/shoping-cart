@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { Api } from '../apiConstants';
+// import { Api } from '../apiConstants';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +9,7 @@ import { Api } from '../apiConstants';
 export class LoginService {
 
   headersOption = {}
+  userApi = 'http://127.0.0.1:3001/api/user';
   constructor(private http: HttpClient) { 
     // let header = new HttpHeaders();
     // header.append('Content-Type', 'application/json');
@@ -18,17 +19,17 @@ export class LoginService {
   }
 
   loginUsers(data) {
-    const url = Api.userApi + '/login';
+    const url = this.userApi + '/login';
     return this.http.post(url, data);
   }
 
   signupUser(data) {
-    const url = Api.userApi + '/signup';
+    const url = this.userApi + '/signup';
     return this.http.post(url, data);
   }
 
   activateDeactivateUser(id, statusCode) {
-    const url = Api.userApi + '/activeDeactivateUser/' + id;
+    const url = this.userApi + '/activeDeactivateUser/' + id;
     let data = {
       status: statusCode
     };
@@ -36,16 +37,16 @@ export class LoginService {
   }
 
   addUserDetails(data) {
-    const url = Api.userApi + '/insertUserDetails';
+    const url = this.userApi + '/insertUserDetails';
     return this.http.post(url, data);
   }
 
   getUserDetails(id) {
-    const url = Api.userApi + '/userDetails/' + id;
+    const url = this.userApi + '/userDetails/' + id;
     return this.http.get(url);
   }
   updateUserDetails(id, data) {
-    const url = Api.userApi + '/updateUserDetails/' + id;
+    const url = this.userApi + '/updateUserDetails/' + id;
     return this.http.put(url, data);
   }
 }

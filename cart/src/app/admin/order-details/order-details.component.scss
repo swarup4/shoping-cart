@@ -1,0 +1,129 @@
+@import "../../app.component.scss";
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+.banner {
+  height: 200px;
+  background: $accent-color;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.content {
+  z-index: 2;
+  position: relative;
+  padding: 0 32px;
+}
+
+.heading {
+  height: 136px;
+
+  .heading-text {
+    font-size: 24px;
+    line-height: 32px;
+    color: $white-color;
+    mat-icon {
+      font-size: 32px;
+      margin-right: 16px;
+      float: left;
+    }
+    a{
+      float: left;
+      color: $white-color;
+    }
+  }
+}
+
+.card-container {
+  padding: 0;
+  border-radius: 8px 8px 0 0;
+}
+.card-content{
+  padding: 24px !important;
+  height: calc(100vh - 297px);
+}
+
+.mat-tab-list{
+  .mat-tab-label {
+    height: 64px !important;
+  }
+}
+
+.table {
+    width: 100%;
+    background: transparent;
+    border-spacing: 0;
+    // border-collapse: separate;
+    tr{
+        th, td{
+            padding: 16px 8px;
+            text-align: left;
+            font-size: 14px;
+            line-height: 19px;
+            &:first-child{
+                padding-left: 24px !important;
+            }
+            &:last-child{
+                padding-right: 24px !important;
+            }
+        }
+    }
+    th{
+        vertical-align: bottom;
+        border-bottom: 1px solid #dee2e6;
+        font-weight: 400;
+        color: rgba(0,0,0,.54);
+    }
+    td{
+        border-bottom: 1px solid #dee2e6;
+        color: rgba(0,0,0,.87);
+        span{
+          line-height: 40px;
+          vertical-align: text-bottom;
+        }
+    }
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.table-image {
+  width: 52px;
+}
+.table-avater{
+  width: 40px;
+  margin-right: 10px;
+}
+section{
+  margin-bottom: 32px;
+}
+.card-content{
+  .heading{
+    height: auto;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center flex-start;
+    align-items: center;
+    span{
+      font-size: 20px;
+      line-height: 24px;
+      margin-left: 16px;
+    }
+  }
+}
+.status{
+  padding: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  color: $white-color;
+}
+
+.table-image{
+  width: 104px;
+}

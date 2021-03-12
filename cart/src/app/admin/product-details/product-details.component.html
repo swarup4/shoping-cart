@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="banner" color="primary"></div>
+    <div class="content">
+        <div fxLayout="column">
+            <div fxLayout="row" fxLayoutAlign="center center" class="heading">
+                <div fxFlex>
+                    <span class="heading-text">
+                        <a [routerLink]="['/admin/product']"><mat-icon>arrow_back</mat-icon></a> 
+                        <span class="heading-text">{{productName}}</span>
+                        <span class="subheading-text">{{productName}}</span>
+                    </span>
+                </div>
+            </div>
+
+            <div fxLayout="row">
+                <mat-card class="card-container" fxFlex>
+                    <mat-tab-group class="tabs" fxFlex>
+                        <mat-tab label="Basic Info" fxFlex>
+                            <div class="card-content">
+                                <h2><mat-icon>account_circle</mat-icon> Customer</h2>
+                                <table class="table">
+                                    <!-- <thead> -->
+                                        <tr>
+                                            <th>Name</th><th>Email</th><th>Phone</th><th>Company</th>
+                                        </tr>
+                                    <!-- </thead> -->
+                                    <tbody>
+                                        <tr>
+                                            <td>Name</td><td>Email</td><td>Phone</td><td>Company</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p>
+                                <p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p>
+                                <p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p><p> Content 1 </p>
+                            </div>
+                        </mat-tab>
+                        <mat-tab label="Product Image" fxFlex>
+                            <div class="card-content"> Content 2 </div>
+                        </mat-tab>
+                        <mat-tab label="Pricing" fxFlex>
+                            <div class="card-content"> Content 2 </div>
+                        </mat-tab>
+                    </mat-tab-group>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

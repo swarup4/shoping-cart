@@ -1,0 +1,22 @@
+<mat-nav-list class="sidebar">
+    <div class="profile">
+        <div class="user-details">Swarup Saha</div>
+        <div class="user-subdetails">swarup.saha004@hotmail.com</div>
+        <div class="profile-image circle-image">
+            <img class="circle-image" src="assets/Profile.jpeg">
+        </div>
+    </div>
+    <div class="sidebar-menu">
+        <a class="sidebar-element" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" routerLink="/admin"
+        mat-list-item href="#">
+            <mat-icon>dashboard</mat-icon> &nbsp; Dashboard
+        </a>
+        <a class="sidebar-element" routerLinkActive="active-link" routerLink="/admin/product" mat-list-item href="#">
+            <mat-icon>shopping_cart</mat-icon> &nbsp; Product
+        </a>
+        <a class="sidebar-element" routerLinkActive="active-link" routerLink="/admin/order" mat-list-item href="#">
+            <mat-icon>assignment</mat-icon> &nbsp; Order
+        </a>
+    </div>
+    
+</mat-nav-list>

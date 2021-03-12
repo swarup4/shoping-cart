@@ -1,0 +1,59 @@
+@import '../../app.component.scss';
+
+.mat-toolbar {
+  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  button{
+    .mat-icon{
+      color: rgba(0,0,0,.54);
+    }
+  }
+}
+
+.mat-drawer.mat-drawer-side{
+  width: 280px;
+  border: none;
+}
+
+div {
+  overflow: inherit;
+}
+
+// a {
+//   text-decoration: none;
+//   // font-size: 110%;
+//   white-space: normal;
+// }
+.menubar-button{
+  line-height: 64px;
+  // height: 64px;
+  font-size: $font-size;
+}
+.user-image{
+  margin-right: 16px;
+  width: 30px;
+  +span{
+    margin-right: 12px;
+  }
+}
+.badge-button{
+  // width: 64px;
+  .mat-badge-content{
+    right: -2px;
+    top: -2px;
+  }
+}
+
+.example-icon {
+  padding: 0 14px;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+  box-sizing: border-box;
+}
+
+.brand-logo{
+  width: 48px;
+  margin: auto;
+}
+

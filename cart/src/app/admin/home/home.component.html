@@ -1,0 +1,65 @@
+<!-- <app-sidenav></app-sidenav> -->
+
+<mat-sidenav-container class="sidenav-container" autosize>
+    <!-- <mat-sidenav #drawer [opened]="isOpenSideNav" class="sidenav mat-elevation-z8" fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'" [mode]="(isHandset$ | async) ? 'over' : 'side'">
+        <mat-toolbar color="primary">
+            <img src="assets/fuse.svg" width="80%" class="brand-logo">
+        </mat-toolbar>
+        <app-sidenav></app-sidenav>
+    </mat-sidenav> -->
+    <mat-sidenav #drawer [opened]="isOpenSideNav" class="sidenav mat-elevation-z8" fixedInViewport="true">
+        <mat-toolbar color="primary">
+            <img src="assets/fuse.svg" width="80%" class="brand-logo">
+        </mat-toolbar>
+        <app-sidenav></app-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar color="default">
+            <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+            <span>Material Dashboard</span>
+            <span fxflex class="example-spacer"></span>
+            <button mat-icon-button>
+                <mat-icon>dashboard</mat-icon>
+            </button>
+            
+            <button mat-icon-button class="badge-button" matBadge="{{notification}}" matBadgePosition="after"
+                matBadgeColor="accent">
+                <mat-icon>notifications</mat-icon>
+            </button> &nbsp;
+
+            <a mat-button class="menubar-button" [matMenuTriggerFor]="menu">
+                <img src="assets/Men.png" class="user-image circle-image">
+                <span> {{username}} </span>
+                <mat-icon>keyboard_arrow_down</mat-icon>
+            </a>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <mat-icon>account_box</mat-icon>
+                    <span>Profile</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>settings</mat-icon>
+                    <span>Account Settings</span>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon>notifications_off</mat-icon>
+                    <span>Disable alerts</span>
+                </button>
+                <button mat-menu-item *ngIf="isLogedIn">
+                    <mat-icon>exit_to_app</mat-icon>
+                    <span>Sign out</span>
+                </button>
+                <button mat-menu-item *ngIf="!isLogedIn" routerLink="/login">
+                    <mat-icon>lock_open</mat-icon>
+                    <span>Login</span>
+                </button>
+            </mat-menu>
+        </mat-toolbar>
+
+        <router-outlet style="z-index: 0"></router-outlet>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>

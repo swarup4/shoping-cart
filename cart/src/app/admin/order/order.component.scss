@@ -1,0 +1,117 @@
+@import "../../app.component.scss";
+
+.container {
+  position: relative;
+  overflow: hidden;
+}
+.banner {
+  height: 200px;
+  background: $accent-color;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.content {
+  z-index: 2;
+  position: relative;
+  padding: 0 32px;
+}
+
+.heading {
+  height: 136px;
+
+  .heading-text {
+    font-size: 24px;
+    line-height: 32px;
+    color: $white-color;
+    mat-icon {
+      font-size: 32px;
+      margin-right: 16px;
+    }
+  }
+}
+
+.search-wrapper {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+  background: $white-color;
+  .search {
+    padding: 0 18px;
+    .mat-icon {
+      display: inline-block;
+      width: 24px;
+      line-height: 48px;
+      height: 48px;
+    }
+    input {
+      height: 48px;
+      min-height: 48px;
+      max-height: 48px;
+      padding: 0 16px;
+      border: none;
+      font-size: 14px;
+      outline: 0;
+      background: #fff;
+      color: rgba(0, 0, 0, 0.87);
+    }
+  }
+}
+
+.card-container {
+  padding: 0;
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  background: transparent;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+.table-image {
+  width: 52px;
+}
+
+td,
+th {
+  width: auto;
+}
+td {
+  height: 84px;
+  &.mat-cell{
+    cursor: pointer;
+  }
+}
+th {
+  height: 64px;
+}
+.status{
+    padding: 4px;
+    font-size: 12px;
+    line-height: 16px;
+    color: $white-color;
+}
+
+.finished{
+  background: #2e7d32;
+}
+.payment-error{
+  background: #b71c1c;
+}
+.shipped{
+  background: #00BCD4;
+}
+.canceled{
+  background: #E91E63;
+}
+.on-pre-order{
+  background: #D500F9;
+}

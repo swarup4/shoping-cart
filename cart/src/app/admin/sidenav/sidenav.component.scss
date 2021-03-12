@@ -1,0 +1,48 @@
+@import '../../app.component.scss';
+
+.sidebar{
+    background: $secondary-base-color;
+    height: calc(100vh - 64px);
+    overflow: auto;
+    padding-top: 0;
+
+    .sidebar-element{
+        color: $white-color;
+        font-size: $font-size;
+    }
+    .sidebar-menu{
+        padding-top: 48px;
+    }
+}
+.mat-toolbar {
+    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12);
+  }
+
+.profile{
+    background: $base-color;
+    padding: 24px 0 64px;
+    position: relative;
+    .user-details,
+    .user-subdetails{
+        color: $white-color;
+        text-align: center;
+    }
+    .user-details{
+        font-size: 16px;
+    }
+    .user-subdetails{
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    .profile-image{
+        position: absolute;
+        padding: 8px;
+        right: 96px;
+        top: 86px;
+        background: $secondary-base-color;
+        img{
+            width: 72px;
+            float: left;
+        }
+    }
+}
